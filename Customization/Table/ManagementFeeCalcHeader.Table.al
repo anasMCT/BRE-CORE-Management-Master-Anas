@@ -4,10 +4,10 @@ table 50120 "Management Fee Calc. Header"
 
     fields
     {
-        field(50100; "Primary Key"; Code[10])
+        field(50100; "Entry No."; Integer)
         {
             DataClassification = ToBeClassified;
-
+            AutoIncrement = true;
         }
         field(50101; "Report Date"; Date)
         {
@@ -112,7 +112,7 @@ table 50120 "Management Fee Calc. Header"
 
     keys
     {
-        key(PK; "Primary Key")
+        key(PK; "Entry No.")
         {
             Clustered = true;
         }

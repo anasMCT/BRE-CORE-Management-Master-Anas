@@ -164,15 +164,15 @@ codeunit 50307 "Property Manager Approval"
             // Use subject based on status
             case StatusText of
                 'Activation':
-                    EmailSubject := 'System Notification: Action Required - Review Approval Contract Status For Activation - Contract ID - ' + Format(Rec."Contract ID");
+                    EmailSubject := 'Review Approval Contract Status For Activation - Contract ID - ' + Format(Rec."Contract ID");
                 'Termination':
-                    EmailSubject := 'System Notification: Action Required - Review Approval Contract Status For Termination - Contract ID - ' + Format(Rec."Contract ID");
+                    EmailSubject := 'Review Approval Contract Status For Termination - Contract ID - ' + Format(Rec."Contract ID");
                 'Suspension':
-                    EmailSubject := 'System Notification: Action Required - Review Approval Contract Status For Suspension - Contract ID - ' + Format(Rec."Contract ID");
+                    EmailSubject := 'Review Approval Contract Status For Suspension - Contract ID - ' + Format(Rec."Contract ID");
                 'Suspended-Unit Released':
-                    EmailSubject := 'System Notification: Action Required - Review Approval Contract Status For Suspension - Contract ID - ' + Format(Rec."Contract ID");
+                    EmailSubject := 'Review Approval Contract Status For Suspension - Contract ID - ' + Format(Rec."Contract ID");
                 else
-                    EmailSubject := 'System Notification: Action Required - Review Approval Contract Status - Contract ID - ' + Format(Rec."Contract ID");
+                    EmailSubject := 'Review Approval Contract Status - Contract ID - ' + Format(Rec."Contract ID");
             end;
 
             // Shared email body format

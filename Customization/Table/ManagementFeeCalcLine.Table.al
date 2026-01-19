@@ -9,12 +9,11 @@ table 50121 "Management Fee Calc. Line"
             DataClassification = ToBeClassified;
             AutoIncrement = true;
         }
-        field(50101; "Primary Key"; Code[10])
+        field(50101; "Header No."; Integer)
         {
             DataClassification = SystemMetadata;
-            Caption = 'Primary Key';
+            Caption = 'Header No.';
         }
-        // field(50102; "")
         field(53102; "Vendor ID"; Code[20])
         {
             DataClassification = ToBeClassified;
@@ -28,22 +27,16 @@ table 50121 "Management Fee Calc. Line"
         {
             DataClassification = ToBeClassified;
         }
-
-        // 3. Property Type
         field(53105; "Property Type"; Text[100])
         {
             DataClassification = ToBeClassified;
         }
-
-        // 4. Calculation Method
         field(53106; "Calculation Method"; Option)
         {
             DataClassification = ToBeClassified;
             OptionMembers =
                 " ","Percentage of Monthly Revenue","Percentage of Annual Rent","Percentage of Collections","Per Unit Fee",Hybrid;
         }
-
-        // 5. Calculation Sub-Type
         field(53107; "Calculation Sub-Type"; Option)
         {
             DataClassification = ToBeClassified;
@@ -112,7 +105,7 @@ table 50121 "Management Fee Calc. Line"
 
     keys
     {
-        key(Key1; "Entry No.", "Primary Key")
+        key(Key1; "Entry No.", "Header No.")
         {
             Clustered = true;
         }
